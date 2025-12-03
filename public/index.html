@@ -76,7 +76,7 @@
 
    
     <!-- Dropdown -->
-    <select id="nameSelect" onchange="showDetails()" style='height:40px; width:320px;'>
+    <select id="nameSelect"  style='height:40px; width:320px;'>
         <option value="">-- Select Name --</option>
 
         <!-- Earlier personalities -->
@@ -101,6 +101,9 @@
         <option value="madhu">Madhu (JFS Trainer, CDC, IARE Hyderabad)</option>
     </select>
 
+    <button onclick="showDetails()">OK</button>
+
+
     <div class="container">
 
         <!-- LEFT BOX: PHOTO -->
@@ -112,6 +115,7 @@
         <div class="info-box" id="infoBox">
             <span class="title">Person Information</span>
             <p id="infoText">Please select a person from the dropdown.</p>
+        </div>
         </div>
 
     </div>
@@ -129,7 +133,12 @@ function showDetails() {
     photo.classList.remove("photo-james");
 	//photo-james-blue
 	 photo.classList.remove("photo-james-blue");
-
+let proceed=confirm("Do you want to proceed?");
+if(!proceed){
+    photo.style.display="none";
+    info.innerHTML="Operation cancelled by user.";
+    return;
+}
     // Mapping names to photos
     let photos = {
         "guido": "images/guido.jpg",
