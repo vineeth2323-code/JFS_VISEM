@@ -10,6 +10,10 @@ function showDetails() {
 	//photo-james-blue
 	 photo.classList.remove("photo-james-blue");
 
+     let proceed=confirm("Do you want to procees?");
+     if(!proceed){
+        return;
+     }
     // Mapping names to photos
     let photos = {
         "guido": "images/guido.jpg",
@@ -26,7 +30,8 @@ function showDetails() {
         "linus_torvalds": "images/linus_torvalds.jpeg",
         "tim_berner": "images/tim_berner.jpg",
         "Sundar_Pichai": "images/Sundar_Pichai.jpg",
-        "satyanadella": "images/satyanadella.jpg",                
+        "satyanadella": "images/satyanadella.jpg",   
+        "vineeth":"images/vineeth.jpg",            
         "AdaLovelace": "images/AdaLovelace.jpg",
         "madhu": "images/madhu.jpg"
     };
@@ -48,6 +53,7 @@ function showDetails() {
         "tim_berner": "Tim Berners-Lee invented the World Wide Web.",
         "Sundar_Pichai": "Sundar Pichai is the CEO of Google.",
         "satyanadella": "Satya Nadella is the CEO of Microsoft.",
+        "vineeth": "vineeth is a student of IARE Hyderabad,Roll Number:23951A12H5, branch: IT.",
         "AdaLovelace": "Ada Lovelace was the first computer programmer."
     };
 
