@@ -90,9 +90,9 @@ function buildTables(timetable) {
         const btn = document.createElement("button");
         btn.innerHTML = "Print This Timetable";
         btn.style.marginBottom = "10px";
-        btn.onclick = function () {
+        btn.addEventListener("click", function() {
             printTable(batch);
-        };
+        });
 
         // Table
         const table = document.createElement("table");
